@@ -7,10 +7,10 @@ import java.util.Set;
 
 @Service
 @SessionScope
-public class Basket {
+public class Bucket {
     private final Set<Integer> itemsId;
 
-    public Basket() {
+    public Bucket() {
         itemsId = new HashSet<>();
     }
 

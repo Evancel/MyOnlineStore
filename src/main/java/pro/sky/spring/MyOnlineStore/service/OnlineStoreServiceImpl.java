@@ -1,25 +1,25 @@
 package pro.sky.spring.MyOnlineStore.service;
 
 import org.springframework.stereotype.Service;
-import pro.sky.spring.MyOnlineStore.model.Basket;
+import pro.sky.spring.MyOnlineStore.model.Bucket;
 
 import java.util.Set;
 
 @Service
 public class OnlineStoreServiceImpl implements OnlineStoreService{
 
-    private final Basket basket;
-    public OnlineStoreServiceImpl(Basket basket){
-        this.basket=basket;
+    private final Bucket bucket;
+    public OnlineStoreServiceImpl(Bucket bucket){
+        this.bucket=bucket;
     }
     @Override
     public String add(Set<Integer> orders) {
-        basket.setItemsId(orders);
+        bucket.setItemsId(orders);
         return "Items are successfully added to the basket";
     }
 
     @Override
     public Set<Integer> get() {
-        return basket.getItemsId();
+        return bucket.getItemsId();
     }
 }
